@@ -9,15 +9,15 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *doub = list;
+	listint_t *reg = list;
 
-	while (list != NULL && doub != NULL)
+	while (reg != NULL && doub != NULL)
 	{
-		list = list->next;
+		reg = reg->next;
 		doub = doub->next->next;
 
-		if (list == doub)
+		if (reg == doub)
 			return (1);
-
 	}
 	return (0);
 }
