@@ -8,16 +8,14 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *reg, *doub;
+	listint_t *doub = list;
 
-	reg = list, doub = list;
-
-	while (reg != NULL && doub != NULL)
+	while (list != NULL && doub != NULL)
 	{
-		reg = reg->next;
+		list = list->next;
 		doub = doub->next->next;
 
-		if (reg == doub)
+		if (list == doub)
 			return (1);
 
 	}
