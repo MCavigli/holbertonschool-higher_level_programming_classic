@@ -11,7 +11,10 @@ int check_cycle(listint_t *list)
 	listint_t *doub = list;
 	listint_t *reg = list;
 
-	while (reg != NULL && doub != NULL)
+	if (list == NULL)
+		return (0);
+
+	while (doub)
 	{
 		reg = reg->next;
 		doub = doub->next->next;
