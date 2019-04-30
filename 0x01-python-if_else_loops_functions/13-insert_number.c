@@ -2,7 +2,7 @@
 /**
  * insert_node - inserts a node in a linked list
  * @head: double pointer to the head of the list
- * number: value to be added to node
+ * @number: value to be added to node
  * Return: the address of the new node, or NULL if it failed
  */
 
