@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-string = "The last digit of "
+string = "Last digit of "
 num = number % 10
 if number < 0:
     num = num * -1
