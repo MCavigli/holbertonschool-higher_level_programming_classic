@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m py_compile $PYFILE; cp __pycache__/main*.pyc ./"$PYFILEc"
+python3 -m py_compile $PYFILE; cp __pycache__/main*.pyc "$PYFILEc"
