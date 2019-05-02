@@ -54,6 +54,7 @@ Write a program that imports functions from the file `calculator_1.py`, does som
 * Your code should not be executed when imported
 
 `guillaume@ubuntu:~/0x02$ cat calculator_1.py
+
 #!/usr/bin/python3
 def add(a, b):
     """My addition function
