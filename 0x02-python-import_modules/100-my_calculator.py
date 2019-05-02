@@ -12,13 +12,13 @@ if __name__ == "__main__":
     a = int(argv[1])
     b = int(argv[3])
     if operator == "+":
-        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+        print("{} + {} = {}".format(a, b, add(a, b)))
     elif operator == "-":
-        print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
     elif operator == "*":
-        print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+        print("{} * {} = {}".format(a, b, mul(a, b)))
     elif operator == "/":
-        print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+        print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
