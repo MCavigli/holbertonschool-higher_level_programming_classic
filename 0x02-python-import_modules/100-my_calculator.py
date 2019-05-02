@@ -4,8 +4,8 @@ import sys
 
 
 if __name__ == "__main__":
-    argc = len(sys.argv)
-    if argc != 4:
+    argc = len(sys.argv) - 1
+    if argc != 3:
         print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         exit(1)
 
