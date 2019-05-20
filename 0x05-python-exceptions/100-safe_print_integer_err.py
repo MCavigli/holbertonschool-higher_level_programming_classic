@@ -8,3 +8,4 @@ def safe_print_integer_err(value):
         return True
     except (TypeError, ValueError) as e:
         print("Exception: {}".format(e), file=sys.stderr)
+        return False
