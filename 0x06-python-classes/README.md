@@ -13,6 +13,10 @@ OOP is a totally new concept for all of you (especially those who think they kno
 * [Python Classes and Objects](https://intranet.hbtn.io/rltoken/CFTUXsxbTVu4xb698_2bmQ)
 * [Object Oriented Programming](https://intranet.hbtn.io/rltoken/DK1vkIQ0xT1fmMrmBcSGiA)
 
+### MORE INFO:
+**Documentation is now mandatory!** Each module, class, and method must contain docstring as comments. 
+* [Example Google Style Python Docstrings](https://intranet.hbtn.io/rltoken/SYdQnrcR2jL5hIs5TkIN5Q)
+
 ##TASKS
 
 ### TASK 0
