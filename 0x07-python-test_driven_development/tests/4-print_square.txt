@@ -57,4 +57,3 @@ If infinity is passed through:
 
 If zero is passed through:
    >>> print_square(0)
-   <BLANKLINE>
