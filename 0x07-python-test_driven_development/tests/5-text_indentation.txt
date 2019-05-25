@@ -1,0 +1,37 @@
+==================
+5-text_indentation
+==================
+
+A function that prints 2 lines following certain characters(., ?, :)
+
+Import the function:
+   >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+If argument is a string:
+   >>> text = "Hello. Hi how's it going today? Neat!"
+   >>> text_indentation(text)
+   Hello.
+   <BLANKLINE>
+   Hi how's it going today?
+   <BLANKLINE>
+   Neat!
+
+If argument is not a string:
+   >>> text_indentation(5)
+   Traceback (most recent call last):
+   	     ...
+   TypeError: text must be a string
+
+Only indentation characters:
+   >>> text_indentation(".?:")
+   .
+   <BLANKLINE>
+   ?
+   <BLANKLINE>
+   :
+   <BLANKLINE>
+
+One special character:
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
