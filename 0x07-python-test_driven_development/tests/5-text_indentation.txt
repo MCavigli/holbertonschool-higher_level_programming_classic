@@ -35,3 +35,13 @@ One special character:
     >>> text_indentation(".")
     .
     <BLANKLINE>
+
+None is passed through:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+   	     ...
+    TypeError: text must be a string
+
+An empty string is passed through:
+    >>> text_indentation("")
+
