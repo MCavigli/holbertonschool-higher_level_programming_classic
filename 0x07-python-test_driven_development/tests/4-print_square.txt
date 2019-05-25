@@ -1,0 +1,60 @@
+=======================
+4-print_square function
+=======================
+
+This function will print a square made of '#'.
+
+Import the function:
+   >>> print_square = __import__('4-print_square').print_square
+
+If argument is an integer:
+   >>> print_square(3)
+   ###
+   ###
+   ###
+
+If argument is not an integer:
+   >>> print_square("hi")
+   Traceback (most recent call last):
+   	     ...
+   TypeError: size must be an integer
+
+If argument is less than zero:
+   >>> print_square(-2)
+   Traceback (most recent call last):
+   	     ...
+   ValueError: size must be >= 0
+
+If argument is a float:
+   >>> print_square(4.25)
+   Traceback (most recent call last):
+   	     ...
+   TypeError: size must be an integer
+
+If no argument is passed through:
+   >>> print_square()
+   Traceback (most recent call last):
+   	     ...
+   TypeError: print_square() missing 1 required positional argument: 'size'
+
+If size is a float and less than zero:
+   >>> print_square(-4.25)
+   Traceback (most recent call last):
+   	     ...
+   TypeError: size must be an integer
+
+If None is passed through:
+   >>> print_square(None)
+   Traceback (most recent call last):
+   	     ...
+   TypeError: size must be an integer
+
+If infinity is passed through:
+   >>> print_square(float('inf'))
+   Traceback (most recent call last):
+   	     ...
+   TypeError: size must be an integer
+
+If zero is passed through:
+   >>> print_square(0)
+   <BLANKLINE>
