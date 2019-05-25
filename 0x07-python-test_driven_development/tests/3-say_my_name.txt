@@ -1,0 +1,50 @@
+======================
+3-say_my_name function
+======================
+
+This function takes in two strings and prints out a statment that includes them.
+
+Import the function:
+       >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+If both arguments are strings:
+       >>> say_my_name("Bob", "Roberts")
+       My name is Bob Roberts
+
+If the first argument is not a string:
+       >>> say_my_name(7, "Roberts")
+       Traceback (most recent call last):
+       		 ...
+       TypeError: first_name must be a string
+
+If the second argument is not a string:
+       >>> say_my_name("Bob", 7)
+       Traceback (most recent call last):
+       		 ...
+       TypeError: last_name must be a string
+
+If there is no first argument:
+       >>> say_my_name("", "Roberts")
+       My name is  Roberts
+
+If there is no second argument:
+       >>> say_my_name("Bob")
+       My name is Bob 
+
+If there are no arguments:
+       >>> say_my_name()
+       Traceback (most recent call last):
+       		 ...
+       TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+If the strings are empty:
+       >>> say_my_name("", "")
+       My name is  
+
+If there one empty string:
+       >>> say_my_name("")
+       My name is  
+
+If there's a long empty string with only spaces:
+       >>> say_my_name("      ")
+       My name is        
