@@ -76,7 +76,7 @@ Take in infinity:
       OverflowError: cannot convert float infinity to integer
 
 Passing in NaN:
-      >>> add_integer(NaN)
+      >>> add_integer(float('nan'))
       Traceback (most recent call last):
       		...
-      NameError: name 'NaN' is not defined
+      ValueError: cannot convert float NaN to integer
