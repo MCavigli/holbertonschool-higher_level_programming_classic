@@ -1,0 +1,76 @@
+======================
+0-add_integer function
+======================
+
+This function takes two integers and adds them together and returns the sum. It is called by add_integer(a, b=98).
+
+Import the function:
+     >>> add_integer = __import__('0-add_integer').add_integer
+
+Adds two integers:
+     >>> add_integer(5, 7)
+     12
+
+Adds two floats:
+     >>> add_integer(12.2, 15.6)
+     27
+
+Adds an integer and a float:
+     >>> add_integer(5, 2.7)
+     7
+
+Adds a float and an integer:
+     >>> add_integer(5.7, 2)
+     7
+
+Adds two negative integers:
+     >>> add_integer(-7, -1)
+     -8
+
+Adds a positive integer and a negative integer:
+     >>> add_integer(2, -3)
+     -1
+
+Adds a negative integer and a positive integer:
+     >>> add_integer(-3, 4)
+     1
+
+Adds a string and an integer or float:
+     >>> add_integer("wrong", 5)
+     Traceback (most recent call last):
+     	       ...
+     TypeError: a must be an integer
+
+Adds an integer and a string:
+     >>> add_integer(6, "nope")
+     Traceback (most recent call last):
+     	       ...
+     TypeError: b must be an integer
+
+Adds two strings:
+     >>> add_integer("wrong", "nope")
+     Traceback (most recent call last):
+     	       ...
+     TypeError: a must be an integer
+
+Takes in one argument:
+      >>> add_integer(5)
+      103
+
+Takes in no arguments:
+      >>> add_integer()
+      Traceback (most recent call last):
+      		...
+      TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Takes in None:
+      >>> add_integer(None)
+      Traceback (most recent call last):
+      		...
+      TypeError: a must be an integer
+
+Take in infinity:
+      >>> add_integer(float('inf'))
+      Traceback (most recent call last):
+      		...
+      OverflowError: cannot convert float infinity to integer
