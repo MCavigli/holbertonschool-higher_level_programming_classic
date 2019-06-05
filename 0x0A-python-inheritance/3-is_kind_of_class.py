@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""This module has a function that checks if an object is an instance of a class
-or of an inherited class
+"""This module has a function that checks if an object is an instance of a
+class or of an inherited class
 """
 
 
