@@ -2,6 +2,7 @@
 """Module holds a function that reads lines and prints to stdout
 """
 
+
 def read_lines(filename="", nb_lines=0):
     """Reads a specified number of lines and prints them to stdout
     Args:
@@ -14,9 +15,7 @@ def read_lines(filename="", nb_lines=0):
         for lines in f:
             count = count + 1
 
-    if nb_lines <= 0:
-        nb_lines = count
-    if nb_lines > count:
+    if nb_lines <= 0 or nb_lines >= count:
         nb_lines = count
 
     i = 0
