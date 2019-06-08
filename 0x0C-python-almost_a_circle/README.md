@@ -8,6 +8,9 @@
 * [Python test cheatsheet](https://intranet.hbtn.io/rltoken/SfEo3RQeAXXYI9yabFRw3g)
 * [json.org](json.org)
 
+### Run unit tests using:
+`python3 -m unittest discover tests`
+
 ## Tasks
 
 ### TASK 0
