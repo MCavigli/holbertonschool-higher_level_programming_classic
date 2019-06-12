@@ -88,6 +88,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(0, 1)
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r = Rectangle(-2, 1)
+        with self.assertRaises(TypeError):
+            r = Rectangle(None, 1)
 
     def test_3_1_height_error(self):
         """Tests for errors with height"""
@@ -106,6 +108,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 0)
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r = Rectangle(1, -2)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, None)
 
     def test_3_2_x_error(self):
         """Tests for errors with x"""
@@ -122,6 +126,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 1, (3, 2))
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             r = Rectangle(1, 1, -2)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 1, None)
 
     def test_3_3_y_error(self):
         """Tests for errors with y"""
@@ -138,6 +144,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 1, 1, (3, 2))
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r = Rectangle(1, 1, 1, -2)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 1, 1, None)
 
     def test_3_4_arg_error(self):
         """Different sort of errors regarding passing arguments"""
@@ -154,43 +162,25 @@ class TestRectangle(unittest.TestCase):
     def test_4_0_area(self):
         """Tests the area method"""
 
-        self.assertEqual(Rectangle.area(self.r1), 6)
-        self.assertEqual(Rectangle.area(self.r2), 25)
-        self.assertEqual(Rectangle.area(self.r3), 20)
-        self.assertEqual(Rectangle.area(self.r4), 42)
-        self.assertEqual(Rectangle.area(self.r5), 10)
+        self.assertEqual(self.r1.area(), 6)
+        self.assertEqual(self.r2.area(), 25)
+        self.assertEqual(self.r3.area(), 20)
+        self.assertEqual(self.r4.area(), 42)
+        self.assertEqual(self.r5.area(), 10)
 
     def test_4_1_area_error(self):
         """Tests when area() should throw an error"""
 
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            r = Rectangle("hi", 3)
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r = Rectangle(3, "hi")
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            r = Rectangle(2.2, 3)
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r = Rectangle(3, 2.2)
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            r = Rectangle([1, 2], 3)
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r = Rectangle(3, [1, 2])
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            r = Rectangle({"hi": 3}, 3)
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r = Rectangle(3, {"hi": 3})
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            r = Rectangle((1, 2), 3)
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r = Rectangle(3, (1, 2))
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            r = Rectangle(0, 1)
-        with self.assertRaisesRegex(ValueError, "height must be > 0"):
-            r = Rectangle(1, 0)
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            r = Rectangle(-2, 1)
-        with self.assertRaisesRegex(ValueError, "height must be > 0"):
-            r = Rectangle(1, -2)
+        with self.assertRaises(TypeError):
+            self.r1.area(1)
+        with self.assertRaises(TypeError):
+            self.r1.area("hi")
+        with self.assertRaises(TypeError):
+            self.r1.area({"hi: 1"})
+        with self.assertRaises(TypeError):
+            self.r1.area((1, 2))
+        with self.assertRaises(TypeError):
+            self.r1.area([1, 2])
 
     def test_5_0_display(self):
         """Tests the display method"""
