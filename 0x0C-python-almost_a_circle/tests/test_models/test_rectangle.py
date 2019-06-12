@@ -90,6 +90,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(-2, 1)
         with self.assertRaises(TypeError):
             r = Rectangle(None, 1)
+        with self.assertRaises(TypeError):
+            r = Rectangle(float('inf'), 1)
 
     def test_3_1_height_error(self):
         """Tests for errors with height"""
@@ -110,6 +112,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, -2)
         with self.assertRaises(TypeError):
             r = Rectangle(1, None)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, float('inf'))
 
     def test_3_2_x_error(self):
         """Tests for errors with x"""
@@ -128,6 +132,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 1, -2)
         with self.assertRaises(TypeError):
             r = Rectangle(1, 1, None)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 1, float('inf'))
 
     def test_3_3_y_error(self):
         """Tests for errors with y"""
@@ -146,6 +152,8 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 1, 1, -2)
         with self.assertRaises(TypeError):
             r = Rectangle(1, 1, 1, None)
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 1, 1, float('inf'))
 
     def test_3_4_arg_error(self):
         """Different sort of errors regarding passing arguments"""
