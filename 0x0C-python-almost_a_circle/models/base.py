@@ -39,7 +39,7 @@ class Base:
             json_string: string representation of a list of dictionaries
         """
 
-        if json_string == None or json_string == "":
+        if json_string is None or len(json_string) == 0:
             return "[]"
 
         return json.loads(json_string)
