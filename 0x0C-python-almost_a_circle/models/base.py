@@ -39,12 +39,11 @@ class Base:
             json_string: string representation of a list of dictionaries
         """
 
-        new_list = []
         if json_string is None or json_string == "":
-            return new_list
-        new_list.append(json.loads(json_string))
+            return "[]"
 
-        return new_list
+
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
