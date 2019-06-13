@@ -18,6 +18,8 @@ class TestBase(unittest.TestCase):
         cls.b1 = Base()
         cls.b2 = Base()
         cls.b3 = Base(22)
+        cls.b4 = Base(2.2)
+        cls.b5 = Base("two")
         cls.r1 = Rectangle(10, 7, 2, 8)
         cls.r2 = Rectangle(2, 4)
 
@@ -48,6 +50,15 @@ class TestBase(unittest.TestCase):
         test3 = self.b3.id
         self.assertEqual(test, test2 - 1)
         self.assertEqual(test3, 22)
+
+    def test_0_4_id_test(self):
+        """Checks ids"""
+
+        self.assertTrue(self.b1, 1)
+        self.assertTrue(self.b2, 2)
+        self.assertTrue(self.b3, 22)
+        self.assertTrue(self.b4, 2.2)
+        self.assertTrue(self.b5, "two")
 
     def test_15_0_toJsonString(self):
         """Tests if the JSON string representation is working"""
