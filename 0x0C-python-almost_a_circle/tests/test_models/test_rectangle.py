@@ -465,6 +465,25 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(Rectangle.__str__
                          (r), "[Rectangle] (6) 0/0 - 2/3")
 
+    def test_13_1_more_dict_tests(self):
+        """Direct comparison tests for dictionary"""
+
+        dict1 = self.r1.to_dictionary()
+        self.assertDictEqual(dict1, {'width': 2, 'height': 3, 'id': 6,
+                                     'x': 0, 'y': 0})
+        dict2 = self.r2.to_dictionary()
+        self.assertDictEqual(dict2, {'y': 0, 'width': 5, 'x': 0, 'id': 7,
+                                     'height': 5})
+        dict3 = self.r3.to_dictionary()
+        self.assertDictEqual(dict3, {'y': 0, 'width': 4, 'height': 5,
+                                     'id': 8, 'x': 1})
+        dict4 = self.r4.to_dictionary()
+        self.assertDictEqual(dict4, {'x': 1, 'width': 6, 'height': 7,
+                                     'id': 98, 'y': 2})
+        dict5 = self.r5.to_dictionary()
+        self.assertDictEqual(dict5, {'x': 3, 'id': 9, 'y': 4,
+                                     'height': 5, 'width': 2})
+
     @classmethod
     def tearDownClass(cls):
         """Breaks down the testing environment"""
