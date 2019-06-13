@@ -7,6 +7,7 @@
 * [unittest module](https://intranet.hbtn.io/rltoken/T7uxwxtGdbRRW9pkD4eO0g)
 * [Python test cheatsheet](https://intranet.hbtn.io/rltoken/SfEo3RQeAXXYI9yabFRw3g)
 * [json.org](json.org)
+* [contextlib](https://docs.python.org/3/library/contextlib.html)
 
 ### Run unit tests using:
 `python3 -m unittest discover tests`
