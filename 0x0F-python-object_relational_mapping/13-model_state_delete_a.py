@@ -20,7 +20,7 @@ if __name__ == "__main__":
     try:
         for state in session.query(State).order_by(State.id).all():
             if 'a' in state.name or 'A' in state.name:
-                session.query.filter_by(state.id).delete()
+                session.query.filter_by(state).delete()
         session.commit()
     except:
         print("Nothing")
