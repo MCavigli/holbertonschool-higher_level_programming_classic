@@ -17,12 +17,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    try:
-        for state in session.query(State).order_by(State.id).all():
-            if 'a' in state.name or 'A' in state.name:
-                session.query(state).delete()
-        session.commit()
-    except:
-        print("Nothing")
-
+    for state in session.query(State).order_by(State.id).all():
+        if 'a' in state.name or 'A' in state.name:
+            session.delete(state)
+    session.commit()
     session.close()
