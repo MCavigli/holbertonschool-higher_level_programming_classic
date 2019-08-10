@@ -18,14 +18,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state, city in session.query(State, City)\
-                              .filter(City.state_id == State.id)\
-                              .order_by(State.id)\
-                              .all():
-        print("{}: ({}) {}".format(state.name, city.state_id, city.name))
-    '''
-    result = session.query(Cities).join(States).all()
-    for row in result:
-        for st in row.
-    '''
+    try:
+        for state, city in session.query(State, City)\
+                                  .filter(City.state_id == State.id)\
+                                  .order_by(State.id)\
+                                  .all():
+            print("{}: ({}) {}".format(state.name, city.state_id, city.name))
+    except:
+        print("Nothing")
     session.close()
