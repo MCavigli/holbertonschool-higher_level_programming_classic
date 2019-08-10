@@ -19,4 +19,3 @@ if __name__ == "__main__":
 
     firstState = session.query(State).first()
     print("{}: {}".format(firstState.id, firstState.name))
-    session.close()
