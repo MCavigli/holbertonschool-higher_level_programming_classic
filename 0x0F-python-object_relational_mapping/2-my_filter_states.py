@@ -24,7 +24,8 @@ def getStates(userName, passWord, dbName, stateName):
     )
 
     cur = db.cursor()
-    sqlCommand = "SELECT * FROM states WHERE name LIKE '{}'".format(stateName)
+    sqlCommand = "SELECT * FROM states WHERE name LIKE BINARY '{}'"
+    .format(stateName)
     cur.execute(sqlCommand)
     query_rows = cur.fetchall()
     for row in query_rows:
