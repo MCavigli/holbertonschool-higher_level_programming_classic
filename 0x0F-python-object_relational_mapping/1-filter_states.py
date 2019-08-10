@@ -23,7 +23,7 @@ def getStates(userName, passWord, dbName):
     )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
     query_rows = cur.fetchall()
 
     for row in query_rows:
