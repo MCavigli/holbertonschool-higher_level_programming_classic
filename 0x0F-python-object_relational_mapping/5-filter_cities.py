@@ -29,17 +29,6 @@ def getStates(userName, passWord, dbName, stateName):
                 "JOIN states ON states.id = cities.state_id "
                 "WHERE states.name = %s;", (stateName,))
     query_rows = cur.fetchall()
-    '''
-    query_rows = [i[0] for i in query_rows]
-    queryLen = len(query_rows)
-    j = 0
-    for row in query_rows:
-        if j == queryLen - 1:
-            print("{}".format(row))
-        else:
-            print("{}".format(row), end=", ")
-            j += 1
-    '''
     print(", ".join([i[0] for i in query_rows]))
     cur.close()
     db.close()
