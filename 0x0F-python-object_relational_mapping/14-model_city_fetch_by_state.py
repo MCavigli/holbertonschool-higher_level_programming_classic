@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Task 14 """
+# Module containing code for Task 14
 
 if __name__ == "__main__":
-    """ """
+    """ prints all City objects from the database hbtn_0e_14_usa """
 
     from sys import argv
     from sqlalchemy import (create_engine)

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Task 7 """
+# Module with code for Task 7
 
 if __name__ == "__main__":
-    """ """
+    """ lists all State objects from the database hbtn_0e_6_usa """
 
     from sys import argv
     from sqlalchemy import (create_engine)

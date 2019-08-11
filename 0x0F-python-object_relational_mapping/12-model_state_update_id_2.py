@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" Task 12 """
+# Module that contains code for Task 12
 
 if __name__ == "__main__":
-    """ """
+    """ changes the name of a State object from the database hbtn_0e_6_usa """
+
     from sys import argv
     from sqlalchemy import (create_engine)
     from model_state import Base, State

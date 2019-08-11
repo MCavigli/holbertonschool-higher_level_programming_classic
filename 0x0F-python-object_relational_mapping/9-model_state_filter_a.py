@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" Task 9 """
+# Module with code for Task 9
 
 if __name__ == "__main__":
-    """ """
+    """  lists all State objects that contain the letter a from the database
+    hbtn_0e_6_usa
+    """
 
     from sys import argv
     from sqlalchemy import (create_engine)

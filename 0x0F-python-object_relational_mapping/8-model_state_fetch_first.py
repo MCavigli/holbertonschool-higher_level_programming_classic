@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Task 8 """
+# Module with code for Task 8
 
 if __name__ == "__main__":
-    """ """
+    """ prints the first State object from the database hbtn_0e_6_usa """
 
     from sys import argv
     from sqlalchemy import (create_engine)

@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" Task 13 """
+# Module containing code for Task 13
 
 if __name__ == "__main__":
-    """ """
+    """ deletes all State objects with a name containing the
+    letter a from the database hbtn_0e_6_usa
+    """
 
     from sys import argv
     from sqlalchemy import (create_engine)
