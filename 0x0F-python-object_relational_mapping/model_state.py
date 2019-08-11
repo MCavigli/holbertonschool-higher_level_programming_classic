@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Base class for State"""
+#Base class for State
 
 
 from sqlalchemy import Column, Integer, String
