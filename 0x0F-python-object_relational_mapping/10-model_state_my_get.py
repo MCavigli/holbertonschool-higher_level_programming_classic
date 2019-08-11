@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-""" Task 10 """
+""" Module that holds code for Task 10 """
 
 if __name__ == "__main__":
-    """ """
+    """
+    prints the State object with the name passed as argument
+    from the database hbtn_0e_6_usa
+    """
 
     from sys import argv
     from sqlalchemy import (create_engine)
@@ -23,13 +26,5 @@ if __name__ == "__main__":
         print("{}".format(my_query.id))
     else:
         print("Not found")
-    '''
-    flag = 0
-    for state in session.query(State).order_by(State.id).all():
-        if state.name == argv[4]:
-            flag = 1
-            print("{}".format(state.id))
-    if flag == 0:
-        print("Not found")
-    '''
+
     session.close()
