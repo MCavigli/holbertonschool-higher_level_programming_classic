@@ -19,9 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id).all():
-        for char in range(len(state.name)):
-            if state.name[char] == 'a':
-                print("{}: {}".format(state.id, state.name))
-                break
+    letterA = session.query(State).filter(State.name.like("%a%"))
+    for state in letterA:
+        print("{}: {}".format(state.id, state.name))
     session.close()
