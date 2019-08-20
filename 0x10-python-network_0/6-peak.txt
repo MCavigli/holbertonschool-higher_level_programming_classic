@@ -1,0 +1,2 @@
+# Complexity of Task 6
+O(n)
