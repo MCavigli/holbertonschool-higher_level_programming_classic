@@ -19,9 +19,6 @@ def rfind(list_of_integers, start, end):
         return (list_of_integers[end])
     mid = (start + end) // 2
 
-    if mid == len(list_of_integers) - 1 or mid == 0:
-        return list_of_integers[mid]
-
     elif list_of_integers[mid] > list_of_integers[mid + 1]:
         return rfind(list_of_integers, start, mid)
     return rfind(list_of_integers, mid + 1, end)
