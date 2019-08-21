@@ -1,2 +1,2 @@
-# Complexity of Task 6
 O(log(n))
+
