@@ -6,8 +6,6 @@ def find_peak(list_of_integers):
     """ finds the peak of an unsorted list of ints """
     if not list_of_integers:
         return None
-    if len(list_of_integers) == 1:
-        return list_of_integers[0]
     return rfind(list_of_integers, 0, len(list_of_integers) - 1,
                  len(list_of_integers))
 
