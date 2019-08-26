@@ -10,7 +10,7 @@ if __name__ == "__main__":
     try:
         q = {'q': sys.argv[1]}
         r = requests.post(url, data=q)
-        if r.headers.get('content-type') is not 'application/json':
+        if r.headers.get('content-type') != 'application/json':
             raise TypeError
         if r.json():
             print("[{}] {}".format(r.json()['id'], r.json()['name']))
