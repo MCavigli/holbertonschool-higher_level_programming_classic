@@ -11,5 +11,5 @@ if __name__ == "__main__":
     r = requests.get(url)
     json_r = r.json()
     print("Number of results: {}".format(json_r.get('count')))
-    for name in json_r.get('results'):
-        print(name.get('name'))
+    for n in json_r.get('results'):
+        print(n.get('name'))
