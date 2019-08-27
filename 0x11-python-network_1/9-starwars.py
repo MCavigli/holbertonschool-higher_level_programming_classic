@@ -12,4 +12,4 @@ if __name__ == "__main__":
     json_r = r.json()
     print("Number of results: {}".format(json_r.get('count')))
     for name in json_r.get('results'):
-        print(name['name'])
+        print(name.get('name'))
