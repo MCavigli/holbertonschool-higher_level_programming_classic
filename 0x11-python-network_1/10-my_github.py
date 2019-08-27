@@ -6,11 +6,12 @@ import requests
 
 if __name__ == "__main__":
     # uses Github credentials to display ID
-    username = sys.argv[1]
-    password = sys.argv[2]
-    url1 = 'https://api.github.com/users/whatever?'
-    url2 = 'client_id={}&client_secret={}'.format(username, password)
-    url = url1 + url2
-    r = requests.get(url)
-    json_r = r.json()
-    print(json_r.get('id'))
+    try:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        url = 'https://api.github.com/user'
+        r = requests.get(url, auth=(username, password))
+        json_r = r.json()
+        print(json_r.get('id'))
+    except:
+        print("None")
