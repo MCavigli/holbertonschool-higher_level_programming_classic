@@ -12,7 +12,8 @@ if __name__ == "__main__":
         url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
         r = requests.get(url)
         r_json = r.json()
-        if len(r_json) > 10:
+        length = len(r_json)
+        if length > 10:
             length = 10
         for i in range(length):
             print("{}: {}".format(r_json[i].get('sha'),
