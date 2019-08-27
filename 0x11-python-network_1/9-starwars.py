@@ -10,6 +10,6 @@ if __name__ == "__main__":
     url = 'https://swapi.co/api/people/?search=' + name
     r = requests.get(url)
     json_r = r.json()
-    print("Number of results: {}".format(json_r['count']))
-    for name in json_r['results']:
+    print("Number of results: {}".format(json_r.get('count')))
+    for name in json_r.get('results'):
         print(name['name'])
