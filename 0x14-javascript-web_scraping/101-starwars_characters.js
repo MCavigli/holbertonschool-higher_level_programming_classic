@@ -8,6 +8,7 @@ request.get(url, function (err, res, body) {
     return;
   }
   const characters = JSON.parse(body).characters;
+  const nameList = [];
   for (let i = 0; i < characters.length; i++) {
     request.get(characters[i], function (err, res, body) {
       if (err) {
@@ -15,7 +16,10 @@ request.get(url, function (err, res, body) {
         return;
       }
       const name = JSON.parse(body).name;
-      console.log(name);
+      nameList.push(name);
     });
+  }
+  for (let j = 0; j < nameList.length; j++) {
+    console.log(nameList[j]);
   }
 });
