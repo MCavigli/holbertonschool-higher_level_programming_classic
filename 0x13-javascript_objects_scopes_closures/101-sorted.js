@@ -9,5 +9,4 @@ for (const k in myDict) {
     newDict[myDict[k]] = [k];
   }
 }
-console.log(myDict);
 console.log(newDict);
